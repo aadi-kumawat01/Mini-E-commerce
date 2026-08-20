@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+@import "tailwindcss";
+
+:root { font-family: "DM Sans", system-ui, sans-serif; color: #18201d; background: #f8f8f3; font-synthesis: none; text-rendering: optimizeLegibility; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; background: #f8f8f3; }
+h1, h2, h3, h4, .font-display { font-family: "Manrope", system-ui, sans-serif; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+::selection { background: #c9f07c; color: #172018; }
+.page-shell { max-width: 1280px; margin-inline: auto; padding-inline: clamp(1rem, 4vw, 2rem); }
+.section-kicker { color: #527026; font-size: .75rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+.soft-grid { background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 32px 32px; }
+@keyframes float { 0%,100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-10px) rotate(0deg); } }
+.hero-float { animation: float 6s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }
