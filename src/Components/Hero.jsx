@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaArrowRight, FaStar } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function Hero() {
   return (
@@ -11,7 +11,6 @@ export default function Hero() {
           <h1 className="mt-5 max-w-2xl text-4xl font-extrabold leading-[.98] tracking-[-.06em] sm:mt-7 sm:text-6xl lg:text-7xl">Better things for <span className="text-[#d9ff8c]">real life.</span></h1>
           <p className="mt-4 max-w-lg text-sm leading-6 text-white/62 sm:mt-6 sm:text-lg sm:leading-7">Thoughtfully chosen tech, beauty and everyday essentials—made to look good, work hard and last longer.</p>
           <div className="mt-6 flex flex-wrap gap-3 sm:mt-9"><Link to="/store" className="flex items-center gap-3 rounded-full bg-[#d9ff8c] px-5 py-3 font-bold text-[#17201c] transition hover:-translate-y-0.5 hover:bg-white sm:px-6 sm:py-3.5">Shop the collection <FaArrowRight className="text-sm" /></Link><Link to="/about" className="rounded-full border border-white/20 px-5 py-3 font-semibold text-white transition hover:bg-white/10 sm:px-6 sm:py-3.5">Why Aven?</Link></div>
-          <div className="mt-7 hidden items-center gap-4 text-sm text-white/60 sm:mt-10 sm:flex"><div className="flex -space-x-2">{["AM", "RK", "SJ"].map((name) => <span key={name} className="grid h-9 w-9 place-items-center rounded-full border-2 border-[#17201c] bg-[#f4eee3] text-[10px] font-bold text-[#17201c]">{name}</span>)}</div><span><b className="text-white">4.9</b> <FaStar className="mx-1 inline text-[#d9ff8c]" /> loved by everyday curators</span></div>
         </div>
         <div className="relative hidden min-h-[350px] md:block md:min-h-[520px]"><div className="absolute inset-4 rounded-[2rem] bg-gradient-to-br from-[#d9ff8c] via-[#84c6aa] to-[#8b7de8] opacity-90 blur-2xl" /><div className="hero-float absolute inset-0 overflow-hidden rounded-[2rem] border border-white/10 bg-[#0f1312] shadow-2xl"><img src="/hero.png" alt="Curated technology and lifestyle collection" className="h-full w-full object-cover object-[70%_center]" /></div><div className="absolute bottom-5 left-[-8px] z-10 rounded-2xl border border-white/10 bg-white/95 p-4 text-[#17201c] shadow-xl sm:left-[-24px]"><p className="text-[10px] font-bold uppercase tracking-[.15em] text-[#6b756f]">This week</p><p className="mt-1 font-display text-lg font-bold">Fresh finds, less noise.</p></div></div>
       </div>
