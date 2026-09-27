@@ -1,4 +1,3 @@
-import React from "react";
 import { FaArrowRight, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 export default function Contact() {

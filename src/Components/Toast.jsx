@@ -1,0 +1,3 @@
+import { FaCheck, FaTimes } from "react-icons/fa";
+import { useStore } from "../Context/store";
+export default function Toast() { const { toast, dismissToast } = useStore(); if (!toast) return null; return <div className="fixed bottom-20 left-4 right-4 z-[60] mx-auto flex max-w-sm items-center gap-3 rounded-2xl bg-[#18201d] px-4 py-3 text-sm font-semibold text-white shadow-xl lg:bottom-4" role="status" aria-live="polite"><FaCheck className="text-[#d9ff8c]" /><span className="flex-1">{toast.message}</span><button type="button" onClick={dismissToast} aria-label="Dismiss notification"><FaTimes /></button></div>; }

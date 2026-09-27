@@ -1,10 +1,11 @@
+   /* eslint-disable react-hooks/set-state-in-effect, react-hooks/exhaustive-deps */
    import { useState ,useEffect } from "react";
    import axios from "axios";
    
    
-   const useproducts = (slug = "")=>{
+   const useProducts = (slug = "")=>{
      const[products ,setProducts] = useState([]);
-      const[loading,setLoding] = useState(true);
+      const[loading,setLoading] = useState(true);
       const[error ,setError] =useState(null)
     
       const fetchProducts = async () => {
@@ -12,19 +13,8 @@
         if(slug !== ""){
           API = API + `/category/${slug}`
         }
-          const response = await  
-           setLoding(true)
-           axios.get(API).then(
-              (response)=>{
-                 setProducts(response.data.products)
-              }
-            ).catch(
-              (error)=>{
-                    setError("internal server error")
-              }
-            ) .finally(()=>{
-                 setLoding(false)
-            })
+          setLoading(true); setError(null);
+          try { const response = await axios.get(API); setProducts(response.data.products || []); } catch { setError("We couldn’t load products right now."); } finally { setLoading(false); }
       };  
       useEffect(() => {
     fetchProducts();
@@ -36,4 +26,4 @@
 
 }   
 
-export {useproducts}
+export {useProducts}
